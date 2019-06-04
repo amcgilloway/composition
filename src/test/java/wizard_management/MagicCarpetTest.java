@@ -1,0 +1,25 @@
+package wizard_management;
+
+import static org.junit.Assert.*;
+import org.junit.*;
+
+public class MagicCarpetTest {
+
+    MagicCarpet magicCarpet;
+
+    @Before
+    public void before(){
+        magicCarpet = new MagicCarpet("Yellow");
+    }
+
+    @Test
+    public void hasColour(){
+        assertEquals("Yellow", magicCarpet.getColour());
+    }
+
+    @Test
+    public void canFly(){
+        assertEquals("Hovering up, straightening out, flying off!", magicCarpet.fly());
+    }
+
+}
